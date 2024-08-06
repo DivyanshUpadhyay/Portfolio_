@@ -1,0 +1,148 @@
+/* Home.css */
+
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #a2c2e0, #f2f6fc); /* Soft gradient for light mode */
+    background-size: 400% 400%; /* For animation */
+    color: #333; /* Text color */
+    min-height: 100vh;
+    font-size: 50px;
+    margin-top: 60px; /* Adjust based on navbar height */
+    transition: background-color 0.3s, color 0.3s;
+    flex-direction: row; /* Ensure flex direction is row */
+    position: relative; /* For pseudo-elements */
+    overflow: hidden; /* To hide pseudo-elements */
+}
+
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, rgba(255,255,255,0) 80%);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.home-section.dark-mode {
+    background: linear-gradient(135deg, #121212, #2c3e50); /* Dark mode gradient */
+    color: #f2f2f5; /* Light text color for dark mode */
+}
+
+.home-section.dark-mode::before {
+    background: radial-gradient(circle, rgba(0,0,0,0.3) 10%, rgba(0,0,0,0) 80%);
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust alignment */
+    max-width: max-content; /* Adjust as needed */
+    width: 100%;
+    margin: 0 auto;
+    margin: 10px;
+    gap: 5rem; /* Increased spacing between text and photo */
+    padding: 1rem; /* Add padding to avoid edge issues */
+    position: relative; /* For relative positioning */
+}
+
+.text-container {
+    flex: 2; /* Increased flex value for better coverage */
+    text-align: left; /* Align text to the left */
+}
+
+.photo-container {
+    flex: 2; /* Adjust flex value */
+    display: flex;
+    justify-content: flex-end; /* Align photo to the right */
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 450px; /* Adjust size */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        gap: 4rem; /* Adjust spacing for tablets */
+    }
+
+    .home-text {
+        font-size: 45px; /* Slightly smaller text size for tablets */
+    }
+
+    .home-subtitle {
+        font-size: 24px; /* Slightly smaller subtitle for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem; /* Reduce gap for smaller screens */
+    }
+
+    .photo-container {
+        margin-top: 1rem;
+        justify-content: center; /* Center photo on smaller screens */
+    }
+
+    .profile-photo {
+        max-width: 200px;
+    }
+
+    .home-text {
+        font-size: 40px; /* Smaller text size for tablets */
+    }
+
+    .home-subtitle {
+        font-size: 22px; /* Smaller subtitle for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-photo {
+        max-width: 220px;
+    }
+
+    .home-text {
+        font-size: 20px; /* Smaller text size for mobile phones */
+    }
+
+    .home-subtitle {
+        font-size: 18px; /* Smaller subtitle for mobile phones */
+    }
+}
+
+.typing-effect {
+    display: inline-block;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+}

@@ -1,0 +1,126 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Single column by default */
+    gap: 1.5rem; /* Space between cards */
+}
+
+/* Style for project card */
+.project-card {
+    position: relative;
+    background: #fff; /* Light mode background */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #666; /* Light mode text color */
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Tech Overlay */
+.tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-card:hover .tech-overlay {
+    opacity: 1;
+}
+
+.tech-stack {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tech-stack span {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.2rem;
+    color: #ffffff; /* Text color for tech stack */
+    text-transform: capitalize;
+}
+
+/* Tech Stack Colors */
+.react { background: #61dcfb98; }
+.bootstrap { background: #a961fb98; } /* React */
+.nodejs { background: #8CC84B; } /* Node.js */
+.mongodb { background: #47A248; } /* MongoDB */
+.expressjs { background: #e3a726; } /* HTML */
+.css { background: #1572B6; } /* CSS */
+.javascript { background: #F7E018; } /* JavaScript */
+.cpp { background: #b702ff; } /* Python */
+.django { background: #092E20; } /* Django */
+.figma { background: #ff1e31; } /* PostgreSQL */
+
+/* Dark Mode Styles */
+.dark-mode .project-card {
+    background: #333; /* Dark mode background */
+}
+
+.dark-mode .project-description {
+    color: #ccc; /* Dark mode text color */
+}
+
+.dark-mode .tech-overlay {
+    background: rgba(0, 0, 0, 0.8); /* Darker overlay for dark mode */
+}
+
+
+
+/* Styles for larger devices */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets and up */
+    }
+}

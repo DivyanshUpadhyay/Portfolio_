@@ -1,0 +1,152 @@
+/* src/Pages/CertificationPage.css */
+
+.certification-page {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    background-color: var(--background-color);
+    padding-top: 5rem; /* Added spacing between the navbar and the title */
+}
+
+.certifications {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.certification-title {
+    font-size: 3rem; /* Increased size */
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    font-weight: bold; /* Added font weight */
+    color: var(--primary-color); /* Highlight color */
+}
+
+.certification-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Center the cards */
+}
+
+.certification-card {
+    background: var(--card-background);
+    border: 2px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    flex: 1 1 calc(50% - 2rem); /* Two cards per row */
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Position relative for image positioning */
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.certification-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.certification-title {
+    font-size: 1.8rem; /* Increased size */
+    margin-bottom: 0.5rem;
+    font-weight: bold; /* Added font weight */
+}
+
+.certification-issuer,
+.certification-date {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem; /* Increased size */
+}
+
+.certification-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.certification-link:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* Achievements Section */
+.achievements {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.achievements h2 {
+    font-size: 3rem; /* Increased size */
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold; /* Added font weight */
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    color: var(--primary-color); /* Highlight color */
+}
+
+.achievements-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.achievements-table th,
+.achievements-table td {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    font-size: 1.2rem; /* Increased size */
+}
+
+.achievements-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold; /* Added font weight */
+}
+
+.achievements-table tr:nth-child(even) {
+    background-color: var(--card-background);
+}
+
+/* Star Icons */
+.star-icon {
+    color: #FFD700; /* Golden color */
+    font-size: 1.5rem; /* Adjust size as needed */
+    margin: 0 2px;
+}
+
+/* Dark mode styles */
+.dark-mode .certification-page {
+    --text-color: #e0e0e0;
+    --background-color: #000000;
+    --border-color: #555;
+    --card-background: #333;
+    --primary-color: #1e88e5;
+    --primary-dark: #1565c0;
+}
+
+/* Light mode styles */
+.light-mode .certification-page {
+    --text-color: #333;
+    --background-color: #f5f5f5;
+    --border-color: #ddd;
+    --card-background: #fff;
+    --primary-color: #1e88e5;
+    --primary-dark: #1565c0;
+}

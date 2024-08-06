@@ -1,0 +1,166 @@
+/* App.css */
+
+/* General body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  /* Light mode styles */
+  body.light-mode {
+    background-color: #ffffff; /* White background for light mode */
+    color: #000000; /* Black text for light mode */
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #121212; /* Dark background for dark mode */
+    color: #ffffff; /* White text for dark mode */
+  }
+  
+  /* General App Styling */
+  .App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    max-height: max-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 100; /* Ensure Navbar is on top */
+  }
+  
+  .navbar-brand a {
+    color: inherit; /* Inherit color from body */
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .nav-item a {
+    color: inherit; /* Inherit color from body */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav-item a:hover,
+  .nav-item a.active {
+    background-color: #555; /* Darker background on hover */
+    color: #fff; /* White text for active link */
+  }
+  
+  /* Toggle switch styles */
+  .toggle-switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .toggle-switch input[type="checkbox"] {
+    display: none;
+  }
+  
+  .toggle-switch .pi {
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  .toggle-switch span {
+    color: inherit; /* Inherit color from body */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: inherit; /* Inherit background from body */
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      max-height: 0;
+    }
+  
+    .navbar-nav.open {
+      max-height: 500px; /* Adjust based on the number of items */
+    }
+  
+    .nav-item {
+      width: 100%;
+    }
+  
+    .nav-item a {
+      display: block;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .toggle-switch {
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-brand a {
+      font-size: 1.2rem;
+    }
+  
+    .nav-item a {
+      font-size: 0.9rem;
+    }
+  }
+  /* Homepage.css */
+
+.App {
+  text-align: center;
+}
+
+
+
+
+
+
+
+.skeleton-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}

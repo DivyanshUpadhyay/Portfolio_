@@ -1,0 +1,105 @@
+/* Default styles */
+.about-me-page {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .about-me-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-me-introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .about-me-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    object-fit: cover;
+    border: 6px solid var(--border-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-me-text {
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .about-me-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+  }
+  
+  .about-me-text p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-me-contact {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .about-me-contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+  }
+  
+  .contact-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-link:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .about-me-page {
+    --text-color: #e0e0e0;
+    --background-color: #121212;
+    --border-color: #333;
+    --primary-color: #1e88e5;
+    --primary-dark: #1565c0;
+    --heading-color: #f5f5f5;
+  }
+  
+  .dark-mode .contact-link {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Light mode styles */
+  .light-mode .about-me-page {
+    --text-color: #333;
+    --background-color: #ffffff;
+    --border-color: #ddd;
+    --primary-color: #1e88e5;
+    --primary-dark: #1565c0;
+    --heading-color: #333;
+  }
+  
+  .light-mode .contact-link {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

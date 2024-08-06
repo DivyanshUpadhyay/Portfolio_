@@ -1,0 +1,48 @@
+/* src/Pages/ResumePage.css */
+
+.resume-page {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    background-color: var(--background-color);
+    padding-top: 5rem; /* Added spacing between the navbar and the title */
+}
+
+.resume {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.resume h1 {
+    font-size: 3rem; /* Increased size */
+    margin-bottom: 2rem;
+    color: var(--primary-color); /* Highlight color */
+    font-weight: bold; /* Added font weight */
+}
+
+.resume-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Adjust height as needed */
+}
+
+.resume-pdf {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Dark mode styles */
+.dark-mode .resume-page {
+    --text-color: #e0e0e0;
+    --background-color: #000000;
+    --primary-color: #1e88e5;
+}
+
+/* Light mode styles */
+.light-mode .resume-page {
+    --text-color: #333;
+    --background-color: #f5f5f5;
+    --primary-color: #1e88e5;
+}
